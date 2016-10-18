@@ -5,6 +5,13 @@
 
   <login-buttons></login-buttons>
 
+  <div>
+    <select #sort (change)="changeSortOrder(sort.value)">
+      <option value="1" selected>Ascending</option>
+      <option value="-1">Descending</option>
+    </select>
+  </div>
+
   <ul>
     <li *ngFor="let party of parties | async">
       <a [routerLink]="['/party', party._id]">{{party.name}}</a>
@@ -13,4 +20,6 @@
       <button (click)="removeParty(party)">X</button>
     </li>
   </ul>
+
+  <pagination-controls (pageChange)="onPageChanged($event)"></pagination-controls>
 </div>

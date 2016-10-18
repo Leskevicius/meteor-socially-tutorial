@@ -22,3 +22,5 @@ dispatch:mocha-phantomjs
 shell-server
 accounts-password
 angular2-compilers
+tmeasday:publish-counts
+anti:fake

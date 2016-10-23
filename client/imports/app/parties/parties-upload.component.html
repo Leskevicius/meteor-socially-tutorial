@@ -1,0 +1,14 @@
+<div layout="column">
+  <div filedrop
+       [ngClass]="{'file-is-over': fileIsOver, 'file-uploading': uploading}"
+       (fileOver)="fileOver($event)"
+       (onFileDrop)="onFileDrop($event)">
+    <div>Drop an image here</div>
+  </div>
+
+  <div layout="row" *ngIf="thumbs">
+    <div *nfFor="let thumb of thumbs | async">
+      <img [src]="thumb.url"/>
+    </div>
+  </div>
+</div>

@@ -40,9 +40,9 @@ export class PartiesFormComponent implements OnInit {
         location: {
           name: this.addForm.value.location
         },
-        images: this.images,
         public: this.addForm.value.public,
-        owner: Meteor.userId()
+        owner: Meteor.userId(),
+        images: this.images
       });
 
       this.addForm.reset();

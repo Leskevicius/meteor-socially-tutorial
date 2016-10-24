@@ -7,7 +7,7 @@
   </div>
 
   <div layout="row" *ngIf="thumbs">
-    <div *nfFor="let thumb of thumbs | async">
+    <div *ngFor="let thumb of thumbs | async">
       <img [src]="thumb.url"/>
     </div>
   </div>
